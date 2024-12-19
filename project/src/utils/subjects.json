@@ -1,0 +1,67 @@
+{
+  "Mathematics": {
+    "beginner": [
+      {
+        "title": "Basic Algebra Concepts",
+        "url": "https://example.com/math/algebra-basics",
+        "duration": "45 minutes",
+        "level": "beginner",
+        "topics": ["Variables", "Equations", "Basic Operations"]
+      },
+      {
+        "title": "Introduction to Geometry",
+        "url": "https://example.com/math/geometry-intro",
+        "duration": "30 minutes",
+        "level": "beginner",
+        "topics": ["Shapes", "Angles", "Basic Measurements"]
+      }
+    ],
+    "intermediate": [
+      {
+        "title": "Advanced Algebra",
+        "url": "https://example.com/math/advanced-algebra",
+        "duration": "60 minutes",
+        "level": "intermediate",
+        "topics": ["Quadratic Equations", "Functions", "Graphs"]
+      }
+    ],
+    "advanced": [
+      {
+        "title": "Calculus Fundamentals",
+        "url": "https://example.com/math/calculus",
+        "duration": "90 minutes",
+        "level": "advanced",
+        "topics": ["Limits", "Derivatives", "Integrals"]
+      }
+    ]
+  },
+  "Physics": {
+    "beginner": [
+      {
+        "title": "Basic Mechanics",
+        "url": "https://example.com/physics/mechanics-basics",
+        "duration": "45 minutes",
+        "level": "beginner",
+        "topics": ["Motion", "Forces", "Energy"]
+      }
+    ],
+    "intermediate": [
+      {
+        "title": "Electricity and Magnetism",
+        "url": "https://example.com/physics/em-basics",
+        "duration": "60 minutes",
+        "level": "intermediate",
+        "topics": ["Electric Fields", "Magnetic Fields", "Circuits"]
+      }
+    ],
+    "advanced": [
+      {
+        "title": "Quantum Mechanics Introduction",
+        "url": "https://example.com/physics/quantum",
+        "duration": "90 minutes",
+        "level": "advanced",
+        "topics": ["Wave Functions", "Uncertainty Principle", "Quantum States"]
+      }
+    ]
+  }
+}
