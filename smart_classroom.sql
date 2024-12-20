@@ -86,7 +86,6 @@ CREATE TABLE assignment_submissions (
     student_id INT NOT NULL,
     file_path VARCHAR(255) NOT NULL,
     submission_date DATETIME DEFAULT CURRENT_TIMESTAMP,
-    plagiarism_score DECIMAL(5,2),
     status ENUM('pending', 'reviewed') DEFAULT 'pending',
     FOREIGN KEY (assignment_id) REFERENCES assignments(id) ON DELETE CASCADE,
     FOREIGN KEY (student_id) REFERENCES students(id) ON DELETE CASCADE
