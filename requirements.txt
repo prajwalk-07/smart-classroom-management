@@ -1,0 +1,12 @@
+Flask
+flask-cors
+mysql-connector-python
+opencv-python
+numpy
+twilio
+requests
+apscheduler
+beautifulsoup4
+PyPDF2
+python-docx
+werkzeug
