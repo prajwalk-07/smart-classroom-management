@@ -37,7 +37,7 @@ DB_CONFIG = {
     'host': 'localhost',
     'user': 'root',
     'password': '',
-    'database': 'smart_classroom2'
+    'database': 'smart_classroom'
 }
 
 def get_db_connection():
