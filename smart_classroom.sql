@@ -1,5 +1,3 @@
-CREATE DATABASE IF NOT EXISTS smart_classroom;
-USE smart_classroom;
 
 -- Users table
 DROP TABLE IF EXISTS users;
