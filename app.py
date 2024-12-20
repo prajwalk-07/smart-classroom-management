@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify,send_from_directory
 from flask_cors import CORS
 import mysql.connector
 from datetime import datetime, timedelta
@@ -15,14 +15,34 @@ import random
 import PyPDF2
 import docx
 import os
+import sqlite3
 from werkzeug.utils import secure_filename
 # Initialize Flask app
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static') 
 CORS(app)
-
+DATABASE_FILE = "database.db"
+SQL_SCRIPT_FILE = "smart_classroom.sql"
 # Logging configuration
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+def initialize_database():
+    if not os.path.exists(DATABASE_FILE):
+        print("Initializing database...")
+        conn = sqlite3.connect(DATABASE_FILE)
+        with open(SQL_SCRIPT_FILE, "r") as f:
+            conn.executescript(f.read())
+        conn.close()
+        print("Database initialized.")
+
+# Serve the React app
+@app.route('/')
+def serve():
+    return send_from_directory(app.static_folder, 'index.html')
+
+# Serve static files for React
+@app.route('/<path:path>')
+def static_files(path):
+    return send_from_directory(app.static_folder, path)
 
 # API Keys and Configuration
 TWILIO_ACCOUNT_SID = 'ACae498339b89f6ed1d86f2c74ad569e39'
@@ -1385,4 +1405,5 @@ def send_absence_notifications(student, subject):
             db.close()
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    initialize_database()  # Ensure the database is set up before starting the app
+    app.run(host='0.0.0.0', port=5000)
