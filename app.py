@@ -20,10 +20,9 @@ from werkzeug.utils import secure_filename
 # Initialize Flask app
 app = Flask(__name__, static_folder='static') 
 CORS(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('MYSQL_URL')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://username:password@hostname:3306/smart_classroom.sql'  # Update with your details
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-DATABASE_FILE = "database.db"
-SQL_SCRIPT_FILE = "smart_classroom.sql"
+
 db = SQLAlchemy(app)
 # Logging configuration
 logging.basicConfig(level=logging.INFO)
