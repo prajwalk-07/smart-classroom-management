@@ -47,10 +47,10 @@ def static_files(path):
     return send_from_directory(app.static_folder, path)
 
 # API Keys and Configuration
-TWILIO_ACCOUNT_SID = 'ACae498339b89f6ed1d86f2c74ad569e39'
-TWILIO_AUTH_TOKEN = 'da7749274c9e8fc63701903f871933c8'
-TWILIO_PHONE_NUMBER = '+17856453727'
-API_KEY = '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'
+TWILIO_ACCOUNT_SID = ''
+TWILIO_AUTH_TOKEN = ''
+TWILIO_PHONE_NUMBER = ''
+API_KEY = ''
 
 twilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
